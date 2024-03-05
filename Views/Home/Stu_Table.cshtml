@@ -1,0 +1,173 @@
+﻿@model IEnumerable<SPS.Models.Student>
+
+@{
+    ViewData["Title"] = "Stu_Table";
+}
+
+<h1>Table</h1>
+
+<p>
+    <a asp-action="Stu_Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Father_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mother_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contect)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alter_Contect)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Addmission_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+           @*  <th>
+                @Html.DisplayNameFor(model => model.January)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.February)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.March)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.April)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.May)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.June)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.July)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.August)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.September)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.October)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.November)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.December)
+            </th> *@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Father_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mother_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contect)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alter_Contect)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addmission_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+           @*  <td>
+                @Html.DisplayFor(modelItem => item.January)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.February)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.March)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.April)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.May)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.June)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.July)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.August)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.September)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.October)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.November)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.December)
+            </td> *@
+            <td>
+                @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | *@
+                    <a asp-action="Stu_Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Stu_Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
